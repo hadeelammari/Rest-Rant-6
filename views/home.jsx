@@ -1,16 +1,17 @@
 const React = require("react");
+const React = require("react");
 const Def = require("./default");
 
 function home() {
   return (
     <Def>
       <main>
-        <h1>HOME</h1>
+        <h1>REST-Rant</h1>
         <div>
-          <img src="/images/chia-fruit-drink.jpg" alt="Chia Fruit Shake" />
+          <img src="/images/Meal Homepage.jpg" alt="Beautiful Food" />
           <div>
-            Photo by <a href="AUTHOR_LINK">Brenda Godinez</a> on{" "}
-            <a href="UNSPLASH_LINK">Unsplash</a>
+            Photo by <a href="https://unsplash.com/@marg">Spencer Davis</a> on{" "}
+            <a href="https://unsplash.com/photos/YUQEo7ajeLA">Unsplash</a>
           </div>
         </div>
         <a href="/places">
