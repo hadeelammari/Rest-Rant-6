@@ -28,7 +28,7 @@ function index(data) {
   return (
     <Def>
       <main>
-        <h1>Hot spot places</h1>
+        <h1>Places to Visit</h1>
         <div className="row">{placesFormatted}</div>
       </main>
     </Def>
