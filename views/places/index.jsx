@@ -15,7 +15,7 @@ function index(data) {
         </p>
         <p className="text-center">
           <a
-            href={`/places/${index}`}
+            href={`/places/${place.id}`}
             className="btn btn-primary"
             title="View details"
           >
