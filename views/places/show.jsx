@@ -1,20 +1,26 @@
-const React = require("react");
-const Def = require("../default");
+const React = require('react')
+const Def = require('../default')
 
-function new_form(data) {
-  let message = "";
-  if (data.message) {
-    message = <h4 className="alert-danger">{data.message}</h4>;
-  }
+function show(place) {
   return (
     <Def>
       <main>
-        <h1>Add a New Place</h1>
-        {message}
-        ...
+        <h1>{place.name}</h1>
       </main>
+
+      <a href={`/places/${place.id}/edit`} className="btn btn-warning">
+        Edit
+      </a>
+
+      <form method="POST" action={`/places/${place.id}?_method=DELETE`}>
+        <button type="submit" className="btn btn-danger">
+          Delete
+        </button>
+      </form>
+
+
     </Def>
-  );
+  )
 }
 
-module.exports = new_form;
+module.exports = show
