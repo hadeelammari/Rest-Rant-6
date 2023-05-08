@@ -2,6 +2,7 @@ const React = require("react");
 const Def = require("../default");
 
 function show(data) {
+  console.log(data)
   let comments = <h3 className="inactive">No comments yet!</h3>;
   let rating = <h3 className="inactive">Not yet rated</h3>;
   if (data.place.comments.length) {
@@ -14,22 +15,23 @@ function show(data) {
       stars += "â­ï¸";
     }
     rating = <h3>{stars} stars</h3>;
-    return (
-      <Def>
-        <main>
-          <div className="row">
-            ...
-            <div className="col-sm-6">
-              <h1>{data.place.name}</h1>
-              <h2>Rating</h2>
-              {rating}
-              <br />
-              ...
-            </div>
-          </div>
-        </main>
-      </Def>
-    );
   }
+  return (
+    <Def>
+      <main>
+        <div className="row">
+          ...
+          <div className="col-sm-6">
+            <h1>{data.place.name}</h1>
+            <h2>Rating</h2>
+            {rating}
+            <br />
+            ...
+          </div>
+        </div>
+      </main>
+    </Def>
+  );
+
 }
 module.exports = show;
